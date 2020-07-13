@@ -1,0 +1,626 @@
+* {
+  text-align: justify;
+}
+
+h1 { 
+  font-weight: bold;
+  font-weight: bold;
+ }
+
+ h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+body {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+:focus {
+  outline: -webkit-focus-ring-color auto 0px !important;
+}
+
+/* navbar-mobile */
+
+.sidebar-widget-1 .list-group-item {
+  padding: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.list-group-hover .list-group-item:hover {
+  background-color:  #fec63e;
+  color: #F8F9F9;
+  transition: all 0.5s ease-out;
+}
+
+.list-group-item.bg-active {
+  background:  #fec63e;
+  color: #F8F9F9;
+}
+
+/* fim-navbar-mobile */
+
+/* carousel banner */
+
+.carousel{
+  margin-bottom: 20px;
+}
+
+.carousel-control-prev{
+  margin-left: 2%;
+}
+
+.carousel-control-next{
+  margin-right: 2%;
+}
+
+.carousel-control-prev,.carousel-control-next{
+  height: 40px !important;
+  margin-top: 245px;
+  background-color: #424949;
+  border-radius: 40px;
+  width: 40px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  color: black;
+}
+
+.card{
+  height: 230px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-left: 5%;
+}
+
+.card-body{
+  height: 50px;
+  padding: 10px !important;
+}
+
+.card-title{
+  font-size: 16px;
+}
+
+.card-img-top{
+  height: 140px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.card-banner{
+  padding-top: 20px;
+}
+
+.carousel-banner{
+  padding-left: 30px;
+}
+
+.img_carrossel_banner{
+  height: 520px !important;
+  padding: 3%;
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 520px !important;
+  border-radius: 2px;
+}
+
+.texto_responsivo{
+  display: none;
+}
+
+/* carousel banner fim */
+
+/* Carrosel Instagran */
+
+.seta_anterior_instagram{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e") !important;
+}
+.seta_proximo_instagram{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e") !important;
+}
+
+.icone_next_carousel_instagram,.icone_prev_carousel_instagram{
+  margin-top: 110px;
+  background-color: white;
+}
+
+.titlebar {
+  overflow: hidden;
+}
+
+.arrival-product .arrival-item ul {
+  margin: 0;
+  padding: 0;
+}
+
+.arrival-product .arrival-item ul li {
+  float: left;
+  list-style: none;
+  width: 23%;
+  overflow: hidden;
+  margin-right: 2.6%;
+}
+
+.arrival-product .arrival-item ul li:last-child {
+  margin-right: 0;
+}
+
+.imagem_carrossel_intagram{
+  margin: 5%;
+  width: 90% !important;
+  transition: .7s;
+}
+.imagem_carrossel_intagram:hover{
+  width: 100% !important;
+  margin: 0% !important;
+}
+
+.mobile_instagram{
+  display: none;
+}
+
+/* Fim Carrossel Instagram */
+
+/* cards instituições */
+
+.card-content {
+background: #ffffff;
+border: 4px;
+}
+
+.card-img {
+position: relative;
+overflow: hidden;
+border-radius: 0;
+z-index: 1;
+}
+
+.card-img img {
+width: 100%;
+height: 180px;
+display: block;
+}
+.card-desc {
+padding: 1.25rem;
+}
+
+.card-desc h3 {
+color: #000000;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+.card-desc p {
+color: #747373;
+  font-size: 14px;
+font-weight: 400;
+font-size: 1em;
+line-height: 1.5;
+margin: 0px;
+margin-bottom: 20px;
+padding: 0;
+font-family: 'Raleway', sans-serif;
+}
+
+/* cards instituições fim */
+
+/* seja um distribuidor */
+
+.div_distribuidor{
+  width: 100%;
+}
+
+.modeloDistr {
+  margin-left: 15%;
+  width: 70%;
+  height: 560px;
+  border-radius: 8px;
+}
+
+.cor1 {
+  color: #424949;
+  background-color: rgba(244,244,240);
+  border-radius: .1rem !important;
+  padding: 10px;
+  margin: 0 7%;
+}
+
+.cor2 {
+  color: #424949;
+  border-radius: .1rem !important;
+  padding: 10px;
+  margin: 0 7%;
+}
+
+.margin_botao_distribuidor{
+  margin-top: 25px;
+}
+
+.aparecer_dist_mobile{
+  display: none;
+}
+
+[data-anime] {
+  opacity: 0;
+  transition: 1.2s;
+}
+
+[data-anime="bottom"] {
+  transform: translate3d(0, 100px, 0);
+}
+
+[data-anime="right"] {
+  transform: translate3d(0, 100px, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/* seja um distribuidor fim */
+
+/* ajustes imagens cards */
+
+#gold_mascara{
+  padding: 0% 4%;
+}
+#gold_shampoo{
+  padding: 5% 35%;
+}
+#gold_hidratante{
+  padding: 2% 15%;
+}
+#gold_kit{
+  padding: 5% 25%;
+}
+#sys_mascara{
+  padding: 6% 25%;
+}
+#sys_shampoo{
+  padding: 6% 35%;
+}
+#sys_hidratante{
+  padding: 6% 30%;
+}
+#sys_kit{
+  padding: 4% 18%;
+}
+#qq_mascara{
+  padding: 6% 30%;
+}
+#qq_shampoo{
+  padding: 4% 35%;
+}
+#qq_hidratante{
+  padding: 2% 10% 0% 20%;
+}
+#qq_kit{
+  padding: 4% 25%;
+}
+
+/* fim ajustes imagens cards */
+
+/* Resposividade */
+
+@media(max-width:1199px){
+  /* banner home */
+
+  .card-title{
+    font-size: 12px;
+  }
+  .card{
+    margin-left: 2%;
+  }
+
+  /* banner home fim */
+
+  /* carousel instagram */
+
+  .icone_next_carousel_instagram,.icone_prev_carousel_instagram{
+    margin-top: 90px;
+  }
+
+  /* carousel instagram fim */
+
+  /* cards instituições */
+
+  .titulo_geledes{
+    margin-bottom: 37px;
+  }
+  .botao_geledes{
+    margin-top: 43px
+  }
+  .modeloDistr {
+    margin-left: 10%;
+    width: 80%;
+    height: 560px;
+    border-radius: 8px;
+  }
+
+  /* cards instituições fim */
+
+  /* distribuidor */
+
+  .cor1 {
+    margin: 0 1%;
+    font-size: 15px;
+  }
+  
+  .cor2 {
+    margin: 0 1%;
+    font-size: 15px;
+  }
+
+  /* distribuidor fim */
+  @media(max-width:991px){
+    /* banner home */
+    .texto_responsivo{
+      display: block;
+    }
+    .texto_desktop{
+      display: none;
+    }
+    .img_carrossel_banner, .banner{
+      height: 400px !important;
+    }
+    .card{
+      height: 180px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    .card-body{
+      height: 50px;
+      padding: 10px !important;
+    }
+    .card-img-top{
+      height: 100px;
+    }
+    .card-banner{
+      padding-top: 10px;
+    }
+    .carousel-control-prev,.carousel-control-next{
+      height: 35px !important;
+      margin-top: 190px;
+      width: 35px;
+    }
+    /* banner home fim*/
+
+     /* carousel instagram */
+    .icone_next_carousel_instagram,.icone_prev_carousel_instagram{
+      margin-top: 65px;
+    }
+    /* carousel instagram fim */
+
+    /* cards instituições */
+
+    .titulo_geledes{
+      margin-bottom: 33px;
+    }
+    .botao_geledes{
+      margin-top: 43px
+    }
+    .descricao_instituicao{
+      display: none;
+    }
+    .titulo_instituicao{
+      font-size: 22px!important;
+    }
+    .botao_geledes{
+      margin-top: 0px;
+    }  
+    /* cards instituições fim */
+
+    /* distribuidor */
+
+    .cor1 {
+      text-align: center;
+      margin: 0 4%;
+      font-size: 18px;
+    }
+    
+    .cor2 {
+      text-align: center;
+      margin: 0 4%;
+      font-size: 18px;
+    }
+    
+    .correcao_margin{
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .animacao{
+      padding: 20px;
+    }
+
+    /* distribuidor fim */
+    @media(max-width:767px){
+      h1{
+        font-size: 30px;
+      }
+      .h2{
+        font-size: 28px;
+      }
+      /* carousel produtos */
+      .carousel-banner{
+        padding:0
+      }
+
+      /* carousel instagram */
+      .container_mobile_instagram{
+        max-width: 570px !important;
+      }
+      .icone_next_carousel_instagram,.icone_prev_carousel_instagram{
+        margin-top: 50px;
+      }
+      /* carousel instagram fim */
+
+      /* cards instituições */
+
+      .titulo_geledes{
+        margin-bottom: 0px;
+      } 
+      .botao_instituicao{
+        margin-left: 30%;
+      }
+      .card-content{
+        margin-bottom: 20px;
+      }
+      /* cards instituições fim */
+
+      /* distribuidor */
+
+      .cor1 {
+        text-align: center;
+        margin: 0 3%;
+        font-size: 14px;
+      }
+      
+      .cor2 {
+        text-align: center;
+        margin: 0 3%;
+        font-size: 14px;
+      }
+      .animacao{
+        padding: 10px;
+      }
+
+      /* distribuidor fim */
+      @media(max-width: 576px){
+        h1{
+          font-size: 23px;
+        }
+        h2{
+          font-size: 22px;
+        }
+        /* banner home */
+        .img_carrossel_banner, .banner{
+          height: 320px !important;
+        }
+        .carousel-control-prev,.carousel-control-next{
+          height: 40px !important;
+          margin-top: 150px;
+          width: 40px;
+        }
+        /* banner home fim */
+
+        /* carousel instagram */
+
+        .mobile_instagram{
+          display: block;
+        }
+
+        .desktop_instagram{
+          display: none;
+        }
+
+        .arrival-product .arrival-item ul li {
+          float: left;
+          width: 48%;
+          margin-right: 4%;
+        }
+
+        .imagem_carrossel_intagram{
+          margin: 2.5%;
+          width: 95% !important;
+          transition: .5s;
+        }
+
+        .icone_next_carousel_instagram,.icone_prev_carousel_instagram{
+          margin-top: 21%;
+        }
+        /* carousel instagram fim */
+
+        /* cards instituições */
+
+        .titulo_instituicao{
+          font-size: 18px !important;
+          text-align: center;
+        } 
+        .botao_instituicao{
+          display: none;
+        }
+
+        /* cards instituições fim */
+
+        /* distribuidor */
+
+        .cor1 {
+          text-align: center;
+          margin: 0 7%;
+          font-size: 14px;
+        }
+        
+        .cor2 {
+          text-align: center;
+          margin: 0 7%;
+          font-size: 14px;
+        }
+        .animacao{
+          padding: 10px;
+        }
+        .ocultar_dist_mobile{
+          display: none;
+        }
+        .aparecer_dist_mobile{
+          display: block;
+        }
+
+        /* distribuidor fim */
+        @media(max-width: 400px){
+          h1{
+            font-size: 20px;
+          }
+          h2{
+            font-size: 19px;
+          }
+          /* banner home */
+          .img_carrossel_banner, .banner{
+            height: 280px !important;
+          }
+          
+          .carousel-control-prev,.carousel-control-next{
+            height: 45px !important;
+            margin-top: 122px;
+            width: 45px;
+          }
+          /* banner home fim */
+
+          /* carousel instagram */
+
+          .icone_next_carousel_instagram,.icone_prev_carousel_instagram{
+            margin-top: 18%;
+          }
+
+          /* carousel instagram fim */
+
+          /* cards instituições */
+
+          .card-content{
+            height: 250px;
+          }
+          .card-desc{
+            padding:auto auto 10px auto;
+          }
+
+          /* cards instituições fim */
+        }
+      }
+    }
+    
+  }
+}
+
+/* Responsividade fim */

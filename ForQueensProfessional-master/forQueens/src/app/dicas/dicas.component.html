@@ -1,0 +1,162 @@
+<main class="fundo">
+  <div><img src="../../assets/img/dicas e tutoriais.jpg" class="banner" alt=""></div>
+  <div class="container mb-3 mt-3">
+    <h1 class="text-center mt-4 pt-4">Dicas e Tutoriais</h1>
+    <hr class="mb-4 pb-4">
+    <div class="row justify-content-center">
+      <div class="card mb-3 ml-3 col-md-5 col-sm-10 col-lg-5 shadow-sm">
+        <div class="row no-gutters">
+          <div class="col-md-5">
+            <img src="../../assets/img/pagina_home/produtos/Clean Plus + Essence Liss.png"
+              class="img_produto card-img mt-4" id="essence_liss" alt="Produto do site">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Kit Essence Liss</h5>
+              <p class="card-text">Proporciona um liso divino e absoluto, já na primeira aplicação, não quebra os fios e
+               dá um resultado perfeito.</p>
+            </div>
+            <br>
+            <div class="d-flex flex-row justify-content-center">    
+              <button class="btn mb-4" data-toggle="modal" data-target="#cleanPlus" (click)="essence_liss()">VER VÍDEO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 ml-3 col-md-5 col-sm-10 col-lg-5 shadow-sm">
+        <div class="row no-gutters">
+          <div class="col-md-5">
+            <img src="../../assets/img/pagina_home/produtos/QNanoPlex.png" id="q_nano" class="img_produto card-img mt-4"
+              alt="Produto do site">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Q-Nano Plex</h5>
+              <p class="card-text">O reconstrutor contém complexos nanotecnológicos que reconstroem cabelos destruídos
+                quimicamente.</p>
+            </div>
+            <br>
+            <div class="d-flex flex-row justify-content-center">
+              <button class="btn mb-4" data-toggle="modal" data-target="#QNano" (click)="q_nano()">VER VÍDEO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 ml-3 col-md-5 col-sm-10 col-lg-5 shadow-sm">
+        <div class="row no-gutters">
+          <div class="col-md-5">
+            <img src="../../assets/img/pagina_home/produtos/Nutrition Rose Shamppo + Hidr..png"
+              class="img_produto card-img mt-4" id="nutrition_rose" alt="Produto do site">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Kit Nutrition Rose</h5>
+              <p class="card-text">Ideal para a recuperação de cabelos porosos, danificados e quebradiços, trazendo-os nutrição e
+                hidratação.</p>
+            </div>
+            <br>
+            <div class="d-flex flex-row justify-content-center">
+              <button class="btn mb-4" data-toggle="modal" data-target="#nutritionRose" (click)="nutrition_rose()">VER VÍDEO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 ml-3 col-md-5 col-sm-10 col-lg-5 shadow-sm">
+        <div class="row no-gutters">
+          <div class="col-md-5">
+            <img src="../../assets/img/pagina_home/produtos/QQ-Cream.png"
+              class=" img_produto card-img mt-4" id="qq_cream" alt="Produto do site">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">QQ Cream</h5>
+              <p class="card-text">Tratamento multifuncional que reúne diversos benefícios em um único produto. É
+                enriquecido com Sericina.</p>
+            </div>
+            <br>
+            <div class="d-flex flex-row justify-content-center">
+              <button class="btn mb-4" data-toggle="modal" data-target="#QQCream" (click)="qq_cream()">VER VÍDEO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modais -->
+
+    <div class="modal show" (click)="pausa_video_liss()" id="cleanPlus">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div>
+                  <video id="essence_Liss" #essenceLiss controls>
+                    <source src="../../assets/video/essence-liss.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" (click)="pausa_video_qnano()" id="QNano">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body" >
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div >
+                  <video id="q_Nano" #qNano controls >
+                    <source src="../../assets/video/QNano.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" (click)="pausa_video_nutrition()" id="nutritionRose">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div>
+                  <video id="nutrition_Rose" #nutritionRose controls>
+                    <source src="../../assets/video/nutrition-rose.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" (click)="pausa_video_qq()" id="QQCream">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div>
+                  <video id="qq_Cream" controls #qqCream>
+                    <source src="../../assets/video/QQ cream.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

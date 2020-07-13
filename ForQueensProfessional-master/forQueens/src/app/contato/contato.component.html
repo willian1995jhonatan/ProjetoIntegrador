@@ -1,0 +1,97 @@
+<div id="backdrop2" (click)="contato_finalizar()"></div>
+<main class="fundo" (mouseover)="assunto()">
+  <div class="container">
+    <h1 class="text-center mt-4 pt-4" id="contato">CONTATO</h1>
+    <hr>
+      <div class="alert alert-dark text-center" id="alerta" role="alert">
+        Contato enviado com sucesso!!
+      </div>
+    <h5 class="text-center m-5 p-4">Entre em contato conosco através do formulário abaixo ou através do nosso telefone e email.</h5>
+
+    <div id="box_contato" class="row">
+      <div id="informacoes_contato" class="col-md-4 col-sm-12 col-lg-4 col-12">
+        <p class="text-left">
+          <fa-icon [icon] = "faMapMarkerAlt" class="" ></fa-icon>
+          R. Pedro Talarico, 239 - Vila Talarico, São Paulo - SP, 03534-000
+        </p>
+        <p class="text-left">
+          <fa-icon [icon] = "faPhoneAlt" class="" ></fa-icon> 
+           (11) 4545-4545
+        </p>
+        <p class="text-left">
+          <fa-icon [icon] = "faEnvelope " class=""></fa-icon>
+           forqueens@generation.com
+        </p>
+      </div>
+      <div class="formulario col-md-4 col-sm-12 col-lg-4">
+        
+        <div class="campos_contato">
+          <div class="d-flex">
+            <fa-icon [icon]="faUser" class="fa-lg icone_contato"></fa-icon>
+            <input class="input-field form-control " type="text" placeholder="Nome completo" name="Nome" id="nome_contato" [(ngModel)]="contatoAPI.nome" [(ngModel)]="contato.nome">
+          </div>
+          <div class="ml-5 mt-1">
+            <span id="erro_nome_contato"> O nome deve ser completo </span>
+            <span id="vazio_nome_contato"> Campo obrigatório! </span>
+          </div>
+        </div>
+        
+        <div class="input-container campos_contato">
+          <div class="d-flex">
+            <fa-icon [icon]="faEnvelope" class="fa-lg icone_contato"></fa-icon>
+            <input class="input-field form-control " type="text" placeholder="E-mail" name="email" id="email_contato" [(ngModel)]="contatoAPI.email" [(ngModel)]="contato.email">
+          </div>
+          <div class="ml-5 mt-1">
+            <span id="erro_email_contato"> O e-mail deve ser válido </span>
+            <span id="vazio_email_contato"> Campo obrigatório! </span>
+          </div>
+        </div>  
+
+        <div class="input-container campos_contato" id="celular">
+          <div class="d-flex">
+            <fa-icon [icon]="faPhoneAlt" class="fa-lg icone_contato"></fa-icon>
+            <input class="input-field form-control " type="text" placeholder="Celular" name="celular" id="celularinput" [(ngModel)]="contatoAPI.telefone" [(ngModel)]="contato.celular" mask="(00)00000-0000">
+          </div>
+          <div class="ml-5 mt-1">
+            <span id="erro_celular_contato"> O celular deve ser válido </span>
+            <span id="vazio_celular_contato"> Campo obrigatório! </span>
+          </div>
+        </div>
+        <div class="input-container campos_contato">
+          <div class="d-flex">
+          <fa-icon [icon]="faQuestionCircle" class="fa-lg icone_contato"></fa-icon>
+          <select id="assunto" class="input-field form-control" type="" name="assunto" [(ngModel)]="contato.assunto" [(ngModel)]="contatoAPI.assunto">
+            <option hidden id="assunto_option">Assunto</option>
+            <option>Sugestão</option>
+            <option>Elogio</option>
+            <option>Distribuidor</option>
+            <option>Dúvida</option>
+            <option>Reclamação</option>
+          </select>
+        </div>
+          <div class="ml-5 mt-1">
+            <span id="vazio_assunto"> Campo obrigatório! </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="formulario col-md-4 col-sm-12 col-lg-4">
+        <div class="input-container campos_contato" id="textarea">
+          <div class="d-flex">
+          <fa-icon [icon] = "faPencilAlt" class="fa-lg icone_contato"></fa-icon>
+          <textarea id="obs observacao" class="form-control" style="resize: none;" maxlength="400"
+            placeholder="Mensagem" name="" id="" cols="30" rows="7" id="mensagem" [(ngModel)]="contatoAPI.mensagem" [(ngModel)]="contato.mensagem"></textarea>
+          </div>  
+          <div class="ml-5 mt-1">
+            <span id="vazio_mensagem"> Campo obrigatório! </span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="icone_contato"></div>
+          <button class="btn" (click)="validar_celular()">ENVIAR</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</main>

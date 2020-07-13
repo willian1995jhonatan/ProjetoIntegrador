@@ -1,0 +1,100 @@
+
+h1 {
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 30px;
+}
+input:focus, select:focus, textarea:focus {
+    border: 1.2px solid black;
+    box-shadow: none;
+}
+
+option,option:hover,option:active,option:focus{
+    border: none;
+}
+ 
+.campos_contato {
+    display: block;
+    min-width: 100%;
+    height: 75px;
+}
+
+.icone_contato {
+    padding: 9px;
+    background: transparent;
+    color: black;
+    min-width: 50px;
+    text-align: center;
+}
+
+.caixa_mensagem{
+    border: 1.5px solid rgb(169, 169, 169);;
+}
+
+.caixa_mensagem:focus{
+    border: 1.5px solid black;
+    box-shadow: none;
+}
+
+option:first-of-type {
+    color: #999;
+}
+
+#pencil1{
+    padding-top: 95px;
+}
+#observacao {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 0;
+}
+#box_contato {
+    margin-bottom: 20px;
+    clear: both;
+}
+
+#erro_nome_contato, #vazio_nome_contato, #erro_email_contato, #vazio_email_contato, #vazio_, #erro_celular_contato, #vazio_celular_contato, #vazio_assunto, #vazio_mensagem{
+    display: none;
+    color: red;
+}
+#textarea{
+    height: 210px;
+    margin-bottom: 15px;
+}
+.alert{
+    position: fixed !important;
+    top: 20vh;
+    left: 9.5vw;
+    z-index: 10;
+    display: none;
+    width: 80vw;
+    height: 3rem !important;
+}
+#backdrop2 {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    display: none;
+  }
+
+@media (max-width: 1110px){
+    #mapa{
+        width: 360px;
+        height: 345px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .text-left{
+        text-align: center !important;
+    }
+   }

@@ -1,0 +1,213 @@
+<div id="backdrop3" (click)="cadastro_finalizar()"></div>
+<div id="backdrop2" (click)="fechar_alert()"></div>
+<div id="backdrop"></div>
+<div class="alert alert-dark text-center" id="alerta" role="alert">
+</div>
+<nav class="container">
+  <div class="navbar shadow-sm navbar-dark fixed-top">
+    <a class="navbar-brand logoSite" [routerLink]="['/home']">
+      <img class="logo" src="../../assets/img/logo oficial.png" alt="logo do site" height="50">
+    </a>
+    <button type="button" class="navbar-toggler d-lg-none d-md-none humburger">
+      <img src="../../assets/img/hamburger.png" class="humburger" alt="Menu">
+    </button>
+    <div class="d-flex justify-content-start desktop">
+      <ul class="d-none d-lg-block d-md-block navbar-nav mr-auto ">
+        <li class="nav-item">
+          <a class="navegacao" [routerLink]="['/produtos']">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="navegacao" [routerLink]="['/dicas']">Dicas e Tutoriais</a>
+        </li>
+        <li class="nav-item">
+          <a class="navegacao" [routerLink]="['/contato']">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="navegacao" [routerLink]="['/sobrenos']">Sobre nós</a>
+        </li>
+      </ul>
+    </div>
+    <div class="desktop">
+      <ul class=" nav d-none d-lg-block d-md-block navbar-nav">
+        <div *ngIf='authService.btnSemLogin()'>
+          <li class="nav-item">
+            <button class="btn transicao" data-toggle="modal" data-target="#modalLogin">Login</button>
+          </li>
+          <li class="nav-item ">
+            <button class="btn" data-toggle="modal" data-target="#modalCadastro">Cadastro</button>
+          </li>
+        </div>
+        <div class="carrinho_desktop"  *ngIf='authService.btnComLogin()'>
+          <li class="nav-item">
+            <a class="btn" [routerLink]="['/perfil']">{{pegarPrimeiroNome(nomeUser)}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn" (click)='sair()'>Sair</a>
+          </li>
+          <li class="position-fixed nav-item">
+            <a [routerLink]="['/pedido']" class="carrinho">
+              <fa-icon [icon]="faShoppingCart" class="fa fa-lg icones pl-3"></fa-icon>
+              <div>R{{ precoTotal | currency }}</div>
+            </a>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <ul class="list-unstyled font-weight-bold sidebar">
+      <li class="divider"></li>
+      <div *ngIf='authService.btnComLogin()'>
+        <li class="nav-item">
+          <a class="text-reset" [routerLink]="['/perfil']">{{pegarPrimeiroNome(nomeUser)}}</a>
+        </li>
+      </div>
+      <a [routerLink]="['/produtos']"><li class="nav-item">
+        <a class="text-reset" style="text-decoration: none;" [routerLink]="['/produtos']">Produtos</a>
+      </li>
+      </a>
+      <a [routerLink]="['/dicas']">
+      <li class="nav-item">
+        <a class="text-reset" style="text-decoration: none;" [routerLink]="['/dicas']">Dicas</a>
+      </li>
+      </a>
+      <a [routerLink]="['/contato']">
+      <li class="nav-item">
+        <a class="text-reset" style="text-decoration: none;" [routerLink]="['/contato']">Contato</a>
+      </li>
+      </a>
+      <a [routerLink]="['/sobrenos']">
+      <li class="nav-item">
+        <a class="text-reset" style="text-decoration: none;" [routerLink]="['/sobrenos']">Sobre</a>
+      </li>
+      </a>
+      <div *ngIf='authService.btnSemLogin()'>
+        <li class="nav-item texto_sidebar" data-toggle="modal" data-target="#modalLogin">
+          Login
+        </li>
+      </div>
+      <div *ngIf='authService.btnSemLogin()'>
+          <li class="nav-item texto_sidebar" data-toggle="modal" data-target="#modalCadastro">
+            Cadastro
+          </li>
+      </div>
+      <div *ngIf='authService.btnComLogin()'>
+        <li class="nav-item">
+          <a [routerLink]="['/pedido']" class="row ml-1" style="font-size: 20px;text-decoration: none;">
+            <fa-icon [icon]="faShoppingCart" class="fa fa-lg icones"></fa-icon>
+            <div style="font-size: 20px;" class="ml-3">R{{ precoTotal | currency }}</div>
+          </a>
+        </li>
+        <li class="nav-item" (click)='sair()'>
+          <a class="text-reset" (click)='sair()'>Sair</a>
+        </li>
+      </div>
+    </ul>
+  </div>
+</nav>
+
+<!-- Modal Login -->
+<div class="modal" id="modalLogin">
+  <div class="modal-dialog">
+    <div class="modal-content" style="max-width: 492px; margin-left: 0px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <h5>Fazer Login</h5>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" class="form-control" id="emailLoign" aria-describedby="emailHelp"
+              [(ngModel)]='userLogin.usuario'>
+          </div>
+          <div class="form-group">
+            <label>Senha</label>
+            <input type="password" class="form-control" id="passwordLogin" [(ngModel)]='userLogin.senha'>
+            <span id="erro_login">E-mail ou senha incorretos</span>
+          </div>
+          <div style="font-size: 13px;">Não tem uma conta? <button data-toggle="modal" data-target="#modalCadastro" style="background: none; color: rgb(0, 103, 184);"> Cadastre-se</button></div>
+          <div class="d-flex justify-content-end mt-3">
+            <button type="button" data-dismiss="modal" class="btn btn-secondary botao_cadastro">Cancelar</button>
+            <button type="submit" class="btn ml-3" (click)='entrar()'>Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal cadastro -->
+<div class="modal" id="modalCadastro">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          <h3>CRIE SUA CONTA</h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div id="cadastro" class="container">
+          <div class="caixa_cadastro">
+            <div id="form_cadastro">
+              <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" class="form-control" aria-describedby="emailHelp" [(ngModel)]="user.usuario"
+                   [(ngModel)]="data.email" id="email">
+                <span id="erro_email">O email deve ser válido!</span>
+                <span id="vazio_email"> Campo obrigatório! </span>
+              </div>
+              <!-- Dados conta PF -->
+              <div class="caixa_cadastro mt-3">
+                <h3>Dados pessoais</h3>
+                <div id="cpf">
+                  <label>CPF</label>
+                  <input type="text" class="form-control" [(ngModel)]="user.cpf" [(ngModel)]="data.cpf" id="cadastroPF"
+                    placeholder="999.999.999-99" mask="000.000.000-00">
+                  <span id="erro_cpf">O cpf deve ser válido!</span>
+                  <span id="vazio_cpf"> Campo obrigatório! </span>
+                </div>
+                <div>
+                  <label>Nome completo</label>
+                  <input type="text" class="form-control" [(ngModel)]="user.nome"
+                    [(ngModel)]="data.nome" id="nome">
+                  <span id="erro_nome">O nome deve ser completo!</span>
+                  <span id="vazio_nome"> Campo obrigatório! </span>
+                </div>
+                <div>
+                  <label>Celular</label>
+                  <input id="celular" type="text" class="form-control" [(ngModel)]="user.celular"
+                    [(ngModel)]="data.celular" mask="(00)00000-0000">
+                  <span id="erro_celular">O celular deve ser válido!</span>
+                  <span id="vazio_celular"> Campo obrigatório! </span>
+                </div>
+                <div id="nascimento">
+                  <label>Data de nascimento</label>
+                  <input type="text" class="form-control" [(ngModel)]="user.dataNascimento"
+                    [(ngModel)]="data.data_nascimento" id="dataNascimento" placeholder="dd/mm/aaaa" mask="00/00/0000">
+                  <span id="vazio_dataNascimento"> Campo obrigatório! </span>
+                  <span id="erro_dataNascimento">A data de nascimento deve ser válida!</span>
+                  <span id="dezoito_dataNascimento">Você deve ser maior de 18 anos!</span>
+                </div>
+                <div>
+                  <label>Senha</label>
+                  <input type="password" class="form-control" [(ngModel)]="user.senha" 
+                    [(ngModel)]="data.senha" id="senha" placeholder="Senha com no mínimo 6 carácteres">
+                  <span id="erro_senha"> A senha deve ter no mínimo 6 carácteres! </span>
+                  <span id="vazio_senha"> Campo obrigatório! </span>
+                </div>
+                <div>
+                  <label>Confirme a senha</label>
+                  <input type="password" class="form-control" id="confirmaSenha" [(ngModel)]="data.senha_confirma">
+                  <span id="erro_confirmaSenha"> Campos devem ser iguais! </span>
+                </div>
+              </div>
+              <!-- Fim dos dados PF -->
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn mt-3" (click)="validarCPF()" id="botaoCPF">Cadastrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
